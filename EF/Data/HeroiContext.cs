@@ -12,5 +12,10 @@ namespace EF.Data
         public DbSet<Heroi> Herois { get; set; }
         public DbSet<Batalha> Batalhas { get; set; }
         public DbSet<Arma> Armas { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("");
+        }
     }
 }
